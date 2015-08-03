@@ -1,25 +1,5 @@
-@font-face {
-  font-family: 'OpenSans';
-  src: url("../type/Open_Sans/OpenSans-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
-  font-family: 'OpenSans';
-  src: url("../type/Open_Sans/OpenSans-Light.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal; }
-@font-face {
-  font-family: 'OpenSans';
-  src: url("../type/Open_Sans/OpenSans-LightItalic.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic; }
-@font-face {
-  font-family: 'OpenSans';
-  src: url("../type/Open_Sans/OpenSans-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal; }
 html {
-  font-family: "OpenSans", sans-serif;
+  font-family: "Courier New", monospace;
   font-weight: 400;
   background-color: rgba(199, 199, 199, 0.35); }
 
@@ -29,3 +9,84 @@ body {
   margin: 0 auto;
   margin-top: 20px;
   padding: 20px; }
+
+.row {
+  width: 100%; }
+  .row.center {
+    text-align: center; }
+  .row.margins {
+    margin: 40px 0; }
+
+.active {
+  font-weight: 800; }
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  vertical-align: top;
+  background-color: rgba(199, 199, 199, 0.35);
+  border-radius: 30px;
+  margin-bottom: 20px;
+  transition: all 250ms ease-in-out;
+  font-size: 1em;
+  line-height: 30px; }
+  .button:hover {
+    background-color: rgba(199, 199, 199, 0.8); }
+
+#power-button {
+  padding-left: 1px;
+  line-height: 28px; }
+
+.subtext {
+  font-size: .8em;
+  color: rgba(0, 0, 0, 0.46); }
+
+.button-wrapper {
+  display: inline-block; }
+
+#refresh-button {
+  float: right; }
+
+input[type="number"] {
+  line-height: 1em;
+  font-size: 3em;
+  font-family: inherit;
+  padding: 0px;
+  text-align: right;
+  border: none;
+  outline: none;
+  width: calc(2em);
+  background-color: transparent; }
+
+#ideal-temp {
+  display: inline-block;
+  position: relative;
+  margin-right: 90px; }
+  #ideal-temp .wrapper:after {
+    position: absolute;
+    font-size: 1.15em;
+    top: 0;
+    right: 63px;
+    content: "\00b0 f";
+    background-color: #F7F7F7;
+    height: 3em; }
+  #ideal-temp .wrapper > .subtext {
+    font-size: 1em;
+    margin-left: -10px; }
+  #ideal-temp .wrapper .temp-buttons {
+    width: 30px;
+    position: absolute;
+    right: -60px;
+    top: -28px; }
+    #ideal-temp .wrapper .temp-buttons div {
+      font-size: 1.35em;
+      vertical-align: middle; }
+      #ideal-temp .wrapper .temp-buttons div:first-child {
+        margin-bottom: 10px; }
+
+#idea-temp-date .content {
+  margin-left: -20px; }

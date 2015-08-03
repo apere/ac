@@ -1,16 +1,122 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script type ="text/javascript" src ="vendor/d3.min.js"></script>
-    <script type ="text/javascript" src ="vendor/jquery.min.js"></script>
-    <script type ="text/javascript" src ="js/data.js"></script>
-    <script type ="text/javascript" src ="js/air.js"></script>
+<!--    <script type ="text/javascript" src ="js/vendor/d3.min.js"></script>-->
+    <script type ="text/javascript" src ="js/vendor/jquery.min.js"></script>
+	  <script type ="text/javascript" src ="js/vendor/moment.min.js"></script>
+    <script type ="text/javascript" src ="js/index.js"></script>
   </head>
   
   <body>
-    <h1 class="title">Chilltron</h1>
-    <div id = "consumption">
-    
+    <h1 class="title">[ air conditioning ]</h1>
+    <div>
+		<div class = "row">
+			<div class = "button-wrapper">
+				<div id= "power-button" class= "button">
+					p
+				</div>
+				<div id= "power-date" class= "subtext">
+					<span class = "content"></span>
+				</div>
+			</div>
+
+			<div id= "refresh-button" class = "button">
+				r
+			</div>
+		</div>
+		<div class = "row center margins">
+			<div id= "ideal-temp">
+				<div class = "wrapper">
+					<input id= "temp-input" class= "content" type="number"  min="65" max="75"> <span class= "subtext"></span>
+					<div class = "temp-buttons">
+						<div id= "temp-up" class= "button">
+							+
+						</div>
+						<div id= "temp-down" class= "button">
+							-
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		
+			<div id= "idea-temp-date" class= "subtext">
+				<span class = "content"></span>
+			</div>
+		</div>
+			<div id= "current-temp">
+				<span class = "label"> current temp: </span>
+				<span class = "content"></span>
+			</div>
+
+			<div id= "current-temp-date" class= "subtext">
+				<span class = "content"></span>
+			</div>
+		
+		<div id= "ext-temp">
+			<span class = "label"> outside temp: </span>
+			<span class = "content"></span>
+		</div>
+		
+		<div id= "ext-temp-date" class= "subtext">
+			<span class = "content"></span>
+		</div>
+		
+		<div id= "mode-updated" class= "subtext">
+			<span class = "content"></span>
+		</div>
+		<ul id= "mode-buttons">
+			<li id= "eco-mode">eco</li>
+			<li id= "cool-mode">cool</li>
+			<li id= "fan-mode">fan</li>
+		</ul>
+		<ul id= "speed-buttons">
+			<li id= "low-speed">low</li>
+			<li id= "medium-speed">medium</li>
+			<li id= "high-speed">high</li>
+		</ul>
+		<div id= "speed-updated" class= "subtext">
+			<span class = "content"></span>
+		</div>
+		<hr>
+		<div id= "electric-rate">
+			<span class = "label"> electricity rate: </span>
+			<span class = "content"></span>
+		</div>
+		<div id= "cost">
+			<span class = "label"> cost: </span>
+			<span class = "content"></span>
+		</div>
+		<div id= "cost-date">
+			<span class = "label"> cost updated on  </span>
+			<span class = "content"></span>
+		</div>		
+		<div id= "consumption">
+			<span class = "label"> consumption: </span>
+			<span class = "content"></span>
+		</div>
+		
+		<div id= "consumption-date">
+			<span class = "content"></span>
+		</div>
+		
+		<div id= "total-cost">
+			<span class = "label"> total cost: </span>
+			<span class = "content"></span>
+		</div>
+		<div id= "avg-daily-cost">
+			<span class = "label"> average daily cost: </span>
+			<span class = "content"></span>
+		</div>
+		<div id= "avg-monthly-cost">
+			<span class = "label"> average monthly cost: </span>
+			<span class = "content"></span>
+		</div>
+		<div id= "ntl-avg-monthly-cost">
+			<span class = "label"> national average monthly cost: </span>
+			<span class = "content"></span>
+		</div>
+		
     </div>
   
   </body>
